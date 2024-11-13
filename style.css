@@ -1,87 +1,66 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
-}
-
-#game-container {
-    position: relative;
-    width: 400px;
-    height: 600px;
-    background-color: #fff;
-    border: 2px solid #000;
-    overflow: hidden;
-}
-
-#score {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
     font-family: Arial, sans-serif;
+    background-color: #ffffff;
 }
 
-#game-over {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 32px;
-    color: red;
-    display: none;
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-end;
 }
 
-.stickman {
-    position: absolute;
-    width: 20px;
-    height: 50px;
+.input-container {
+    border: 2px solid #4285f4;
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
-/* Gaya untuk maling (stickman biru) */
-#maling {
-    background-color: transparent;
-    bottom: 20px;
-    left: 180px;
+.input-container input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 18px;
 }
 
-/* Gaya untuk polisi (stickman merah) */
-#polisi {
-    background-color: transparent;
-    bottom: 100px;
-    left: 180px;
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f1f1f1;
+    padding: 10px;
 }
 
-/* Bagian kepala stickman */
-.stickman::before {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 5px;
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    border-radius: 50%;
+.keyboard button {
+    width: 18%;
+    margin: 1%;
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
 }
 
-/* Bagian tubuh stickman */
-.stickman::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 9px;
-    width: 2px;
-    height: 20px;
-    background-color: black;
+.keyboard button.wide {
+    width: 38%;
 }
 
-/* Rintangan */
-.obstacle {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: green;
-    border-radius: 10%;
-    }
+.keyboard button.blue {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+.keyboard button.gray {
+    background-color: #e0e0e0;
+}
+
+.keyboard button:active {
+    background-color: #ddd;
+}
+
+.keyboard .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
