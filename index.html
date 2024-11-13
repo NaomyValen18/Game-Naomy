@@ -1,18 +1,71 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kejar-kejaran Polisi dan Maling - Stickman</title>
+    <title>Kalkulator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <div id="maling" class="stickman"></div>
-        <div id="polisi" class="stickman"></div>
-        <div id="score">Score: 0</div>
-        <div id="game-over" class="hidden">Game Over!</div>
+    <div class="container">
+        <div class="input-container">
+            <input type="text" id="display" disabled />
+        </div>
+        <div class="keyboard">
+            <div class="row">
+                <button class="gray" onclick="appendValue('utama')">utama</button>
+                <button class="gray" onclick="appendValue('abc')">abc</button>
+                <button class="gray" onclick="appendValue('fgsi')">fgsi</button>
+                <button class="blue" onclick="appendValue('RAD')">RAD</button>
+                <button class="blue" onclick="appendValue('DRJT')">DRJT</button>
+                <button class="gray" onclick="deleteLast()">↶</button>
+                <button class="gray" onclick="clearDisplay()">hapus semua</button>
+                <button class="gray" onclick="appendValue('⚙')">⚙</button>
+            </div>
+            <div class="row">
+                <button onclick="appendValue('a²')">a²</button>
+                <button onclick="appendValue('aᵇ')">aᵇ</button>
+                <button onclick="appendValue('|a|')">|a|</button>
+                <button onclick="appendValue('√')">√</button>
+                <button onclick="appendValue('ⁿ√')">ⁿ√</button>
+                <button onclick="appendValue('π')">π</button>
+            </div>
+            <div class="row">
+                <button onclick="appendValue('sin')">sin</button>
+                <button onclick="appendValue('cos')">cos</button>
+                <button onclick="appendValue('tan')">tan</button>
+                <button onclick="appendValue('(')">(</button>
+                <button onclick="appendValue(')')">)</button>
+                <button onclick="appendValue('/')">÷</button>
+            </div>
+            <div class="row">
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+            </div>
+            <div class="row">
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button onclick="appendValue('0')">0</button>
+                <button onclick="appendValue('.')">.</button>
+                <button onclick="appendValue('ans')">ans</button>
+            </div>
+            <div class="row">
+                <button class="wide" onclick="appendValue('%')">%</button>
+                <button class="wide" onclick="appendValue('/')">a/b</button>
+                <button onclick="deleteLast()">←</button>
+                <button onclick="appendValue('*')">×</button>
+                <button onclick="appendValue('-')">−</button>
+                <button onclick="appendValue('+')">+</button>
+                <button class="blue" onclick="calculate()">↵</button>
+            </div>
+        </div>
     </div>
-    <script src="game.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
