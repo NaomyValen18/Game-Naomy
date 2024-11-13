@@ -1,19 +1,18 @@
 body {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
     background-color: #f0f0f0;
 }
 
 #game-container {
     position: relative;
-    width: 800px;
+    width: 400px;
     height: 600px;
     background-color: #fff;
-    border: 2px solid black;
+    border: 2px solid #000;
     overflow: hidden;
 }
 
@@ -23,7 +22,6 @@ body {
     right: 10px;
     font-size: 24px;
     font-family: Arial, sans-serif;
-    color: #000;
 }
 
 #game-over {
@@ -33,33 +31,57 @@ body {
     transform: translate(-50%, -50%);
     font-size: 32px;
     color: red;
-    font-weight: bold;
     display: none;
 }
 
-.hidden {
-    display: none;
-}
-
-#polisi, #maling {
+.stickman {
     position: absolute;
-    width: 50px;
+    width: 20px;
     height: 50px;
+}
+
+/* Gaya untuk maling (stickman biru) */
+#maling {
+    background-color: transparent;
+    bottom: 20px;
+    left: 180px;
+}
+
+/* Gaya untuk polisi (stickman merah) */
+#polisi {
+    background-color: transparent;
+    bottom: 100px;
+    left: 180px;
+}
+
+/* Bagian kepala stickman */
+.stickman::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: black;
     border-radius: 50%;
 }
 
-#maling {
-    background-color: blue;
+/* Bagian tubuh stickman */
+.stickman::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    width: 2px;
+    height: 20px;
+    background-color: black;
 }
 
-#polisi {
-    background-color: red;
-}
-
+/* Rintangan */
 .obstacle {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: green;
-    border-radius: 50%;
-}
+    border-radius: 10%;
+    }
